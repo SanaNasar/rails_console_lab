@@ -55,7 +55,7 @@ For this lab, we'd like you to strengthen your Rails console skills. This lab is
 	
 9. Using the create syntax create a student named John Doe who is 33 years old
 	
-		Student.create({:first_name => 'John', :last_name => "Doe", age: 22})
+		Student.create({:first_name => 'John', :last_name => "Doe", age: 33})
 	
 10. Show if this new student entry is valid
 	
@@ -63,7 +63,7 @@ For this lab, we'd like you to strengthen your Rails console skills. This lab is
 	
 11. Show the number of errors for this student instance
 	
-		student.errors.count
+		student.errors.count (or) john.errors.size
 	
 12. In one command, Change John Doe's name to Jonathan Doesmith
 
