@@ -6,7 +6,7 @@ For this lab, we'd like you to strengthen your Rails console skills. This lab is
 
 1. Create a model called Student, that has a first_name, last_name and age
 	
-		Student.new(:first_name => "John", :last_name => "Doe", :age => 30)
+		Student.new(:first_name => "Jane", :last_name => "Doe", :age => 22)
 
 
 2. Don't forget to run your migrations
@@ -17,7 +17,7 @@ For this lab, we'd like you to strengthen your Rails console skills. This lab is
 
 1. Using the new/save syntax, create a student, first and last name and an age
 	
-		Student.new(:first_name => "John", :last_name => "Doe", :age => 30)
+		Student.new(:first_name => "Jane", :last_name => "Doe", :age => 22)
 		
 2. Save the student to the database
 	
@@ -55,7 +55,7 @@ For this lab, we'd like you to strengthen your Rails console skills. This lab is
 	
 9. Using the create syntax create a student named John Doe who is 33 years old
 	
-		Student.create({:first_name => 'John', :last_name => "Doe", age: 33})
+		Student.create({:first_name => 'Jane', :last_name => "Doe", age: 22})
 	
 10. Show if this new student entry is valid
 	
@@ -67,7 +67,7 @@ For this lab, we'd like you to strengthen your Rails console skills. This lab is
 	
 12. In one command, Change John Doe's name to Jonathan Doesmith
 
-		student = Student.find_by_last_name("Doe") student.update_attribute(:last_name => "Doesmith")
+		student = Student.find_by_last_name("Doe") student.update_attribute(:last_name => "Doelane")
 	
 13. Clear the errors array
 
@@ -97,7 +97,7 @@ For this lab, we'd like you to strengthen your Rails console skills. This lab is
 		
 18. Find the student with the last name of Doesmith
 
-		Student.find_by_last_name("Doesmith")
+		Student.find_by_last_name("Doelane")
 	
 19. Find all of the students and limit the search to 5 students, starting with the 2nd student and finally, order the students in alphabetical order
 	
@@ -106,7 +106,7 @@ For this lab, we'd like you to strengthen your Rails console skills. This lab is
 
 20. Delete Jonathan Doesmith
 
-		student = Student.find_by_last_name('Doesmith')
+		student = Student.find_by_last_name('Doelane')
 		//find the person
 		student.destroy()
 		//then destroy it
@@ -119,21 +119,21 @@ For this lab, we'd like you to strengthen your Rails console skills. This lab is
 2. Write a custom validation to ensure that no one named Delmer Reed, Tim Licata, Anil Bridgpal or Elie Schoppik is included in the students table
 
 		FORBIDDEN_NAMES = [
-    	["Anil", "Bridgpal"],
-    	["Elie", "Schoppik"],
-    	["Delmer", "Reed"],
-    	["Tim", "Licata"]
+	    		["Anil", "Bridgpal"],
+	    		["Elie", "Schoppik"],
+	    		["Delmer", "Reed"],
+	    		["Tim", "Licata"]
   		]
   		validate :name_is_allowed
 
   		def name_is_allowed
-    		FORBIDDEN_NAMES.each do |name|
-      			if name[0].include?(first_name) &&
-      			name[1].include?(last_name)
-          		errors.add(:name,"you are a restricted
-          		user")
-      			end
-    		end
+    			FORBIDDEN_NAMES.each do |name|
+	      			if name[0].include?(first_name) &&
+	      			name[1].include?(last_name)
+	          		errors.add(:name,"you are a restricted
+	          		user")
+      				end
+    			end
   		end
 
 
