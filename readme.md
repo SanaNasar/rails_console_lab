@@ -55,7 +55,7 @@ For this lab, we'd like you to strengthen your Rails console skills. This lab is
 	
 9. Using the create syntax create a student named John Doe who is 33 years old
 	
-		Student.create({:first_name => 'Jane', :last_name => "Doe", age: 22})
+		Student.create({:first_name => 'John', :last_name => "Doe", age: 22})
 	
 10. Show if this new student entry is valid
 	
@@ -67,7 +67,7 @@ For this lab, we'd like you to strengthen your Rails console skills. This lab is
 	
 12. In one command, Change John Doe's name to Jonathan Doesmith
 
-		student = Student.find_by_last_name("Doe") student.update_attribute(:last_name => "Doelane")
+		student = Student.find_by_last_name("Doe") student.update_attribute(:last_name => "Doesmith")
 	
 13. Clear the errors array
 
@@ -97,7 +97,7 @@ For this lab, we'd like you to strengthen your Rails console skills. This lab is
 		
 18. Find the student with the last name of Doesmith
 
-		Student.find_by_last_name("Doelane")
+		Student.find_by_last_name("Doesmith")
 	
 19. Find all of the students and limit the search to 5 students, starting with the 2nd student and finally, order the students in alphabetical order
 	
@@ -106,7 +106,7 @@ For this lab, we'd like you to strengthen your Rails console skills. This lab is
 
 20. Delete Jonathan Doesmith
 
-		student = Student.find_by_last_name('Doelane')
+		student = Student.find_by_last_name('Doesmith')
 		//find the person
 		student.destroy()
 		//then destroy it
