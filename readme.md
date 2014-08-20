@@ -115,6 +115,7 @@ For this lab, we'd like you to strengthen your Rails console skills. This lab is
 1. Use the validates_format_of and regex to only validate names that consist of letters (no numbers or symbols) and start with a capital letter
 
 		validates_format_of :first_name, :last_name, :with => /\A[A-Z][a-z]{3,}\z/
+																									[Rubular](http://rubular.com)
 	
 2. Write a custom validation to ensure that no one named Delmer Reed, Tim Licata, Anil Bridgpal or Elie Schoppik is included in the students table
 
