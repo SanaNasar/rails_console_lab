@@ -31,11 +31,10 @@ For this lab, we'd like you to strengthen your Rails console skills. This lab is
 	
 		student.save
 
-	
- 4. Delete the student (where first_name is taco)
+4. Delete the student (where first_name is taco)
 	
 		student = Student.find(1)
-	
+
 		student.destroy
 
 5. Validate that every Student's last name is unique
@@ -85,7 +84,7 @@ For this lab, we'd like you to strengthen your Rails console skills. This lab is
 	
 15. Find the student with an ID of 128 and if it does not exist, make sure it returns nil and not an error
 		
-			Student.find_by_id(128)
+		Student.find_by_id(128)
 
 	
 16. Find the first student in the table
